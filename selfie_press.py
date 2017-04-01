@@ -18,8 +18,15 @@ sleep(2)
 # reading the key press event and take a picture
 for event in device.read_loop():
     if event.type == evdev.ecodes.EV_KEY:
-        print(categorize(event))
+        print event
         camera.capture('selfie.jpg')
+            #check to see if photo is in folder?
+        # camera.close()
+    
+
+##    else:
+##        print "no picture"
+##        camera.close()
 
 
 
